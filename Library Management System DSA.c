@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Create Structure of Library
+
 struct library {
     char book_name[50];
     char author[50];
@@ -24,14 +24,14 @@ int main()
         printf("4. List the count of books in the library\n");
         printf("5. Remove a book\n6. Exit");
 
-        // Enter the book details
+        
         printf("\n\nEnter one of the above: ");
         scanf("%d", &input);
         getchar(); 
 
-        // Process the input
+        
         switch (input) {
-            // Add book
+            
             case 1:
                 printf("Enter book name: ");
                 fgets(lib[count].book_name, sizeof(lib[count].book_name), stdin);
@@ -41,11 +41,11 @@ int main()
                 fgets(lib[count].author, sizeof(lib[count].author), stdin);
                 lib[count].author[strcspn(lib[count].author, "\n")] = 0; 
 
-                // Increment count after adding a book
+                
                 count++;
                 break;
 
-            // Print book info
+            
             case 2:
                 printf("You have entered the following information:\n");
                 for (i = 0; i < count; i++) {
@@ -54,11 +54,11 @@ int main()
                 }
                 break;
 
-            // Take the author name as input
+            
             case 3:
                 printf("Enter author name: ");
                 fgets(ar_nm, sizeof(ar_nm), stdin);
-                ar_nm[strcspn(ar_nm, "\n")] = 0; // Remove newline
+                ar_nm[strcspn(ar_nm, "\n")] = 0; 
                 for (i = 0; i < count; i++) {
                     if (strcmp(ar_nm, lib[i].author) == 0) {
                         printf("Book name: %s, Author: %s\n",
