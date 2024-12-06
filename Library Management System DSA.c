@@ -17,7 +17,7 @@ int main()
     int i, input, count;
     i = input = count = 0;
 
-    while (input != 6) { // Updated to 6 to include the remove option
+    while (input != 6) { 
         printf("\nLIBRARY MANAGEMENT SYSTEM\n");
         printf("\n1. Add book information\n2. Display book information\n");
         printf("3. List all books of given author\n");
@@ -45,7 +45,7 @@ int main()
                 count++;
                 break;
 
-            // Print book information
+            // Print book info
             case 2:
                 printf("You have entered the following information:\n");
                 for (i = 0; i < count; i++) {
