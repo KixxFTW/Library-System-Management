@@ -27,7 +27,7 @@ int main()
         // Enter the book details
         printf("\n\nEnter one of the above: ");
         scanf("%d", &input);
-        getchar(); // Consume newline character left by scanf
+        getchar(); 
 
         // Process the input
         switch (input) {
@@ -35,11 +35,11 @@ int main()
             case 1:
                 printf("Enter book name: ");
                 fgets(lib[count].book_name, sizeof(lib[count].book_name), stdin);
-                lib[count].book_name[strcspn(lib[count].book_name, "\n")] = 0; // Remove newline
+                lib[count].book_name[strcspn(lib[count].book_name, "\n")] = 0; 
 
                 printf("Enter author name: ");
                 fgets(lib[count].author, sizeof(lib[count].author), stdin);
-                lib[count].author[strcspn(lib[count].author, "\n")] = 0; // Remove newline
+                lib[count].author[strcspn(lib[count].author, "\n")] = 0; 
 
                 // Increment count after adding a book
                 count++;
